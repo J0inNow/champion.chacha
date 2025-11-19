@@ -1,46 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Champion Chacha</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes btnAnimation { 0% {transform: scale(1);} 50% {transform: scale(1.1);} 100% {transform: scale(1);} }
-        .tetegrambtn { 
-            background-size: 300% 300%; 
-            animation: btnAnimation 2s ease infinite; 
-            transition: transform 0.3s ease; 
-            /* Added a glow effect */
-            box-shadow: 0 0 20px rgba(2, 212, 216, 0.7);
-        }
-        .hurry { animation: hurry 1s linear infinite forwards; }
-        @keyframes hurry { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-        .tetegrambtn:hover { transform: scale(1.2); }
-        body { cursor: pointer; }
-        
-        /* New class for the gradient text effect */
-        .gradient-text {
-            background-image: linear-gradient(45deg, #f3ec78, #f09433 50%, #ee2a7b);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        /* Remove background video and set navy blue solid background */
-        body {
-            background-color: #001f3d; /* Navy blue color */
-        }
-
-    </style>
-
-    
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P934PK4W');</script>
+<!DOCTYPE html><html lang="en"><head>
+ 
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -55,116 +15,208 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1313866966860591&ev=PageView&noscript=1"
-
-fbq('track', 'Subscribe', {value: '0.00', currency: 'USD', predicted_ltv: '0.00'});
-              
 /></noscript>
+<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>CHAMPION CHACHA - Premium Cricket Predictions</title>
+
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at top,#1a002f 0%,#000 90%);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  text-align:center;
+  padding:40px 20px;
+  overflow-x:hidden;
+}
+
+/* Profile Section */
+.profile-container{
+  position:relative;
+  display:inline-block;
+  margin-bottom:20px;
+}
+.profile-ring{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:115%;height:115%;border:3px solid transparent;border-radius:50%;
+  background:linear-gradient(45deg,#FFD700,#FFA500,#FFD700);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;padding:4px;
+  animation:spin 3s linear infinite;
+}
+@keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+.profile-image{
+  width:140px;height:140px;border-radius:50%;
+  object-fit:cover;border:4px solid #fff;
+  box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+.verified-badge{
+  position:absolute;bottom:5%;right:5%;
+  background:linear-gradient(135deg,#00b4ff,#0077ff);
+  border-radius:50%;width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;
+  border:3px solid #fff;
+  box-shadow:0 0 10px rgba(0,180,255,0.4);
+}
+.verified-badge span{color:#fff;font-size:16px;font-weight:bold;}
+
+.premium-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:linear-gradient(135deg,#FFD700,#FFA500);
+  color:#000;font-weight:700;font-size:0.85rem;
+  padding:6px 16px;border-radius:20px;
+  margin-bottom:10px;
+}
+.channel-name{
+  font-size:2.4rem;font-weight:900;
+  background:linear-gradient(90deg,#FFD700,#FFB800);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  margin-bottom:6px;
+}
+.location{color:#aaa;font-weight:500;margin-bottom:20px;}
+
+/* Tagline */
+.tagline{font-size:1.1rem;color:#ccc;max-width:480px;line-height:1.6;margin-bottom:25px;}
+.highlight{color:#FFD700;font-weight:700;}
+
+/* CTA */
+.cta-button{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,#FFD700,#FFA500);
+  color:#000;font-size:1.1rem;font-weight:900;
+  padding:16px 30px;border:none;border-radius:50px;
+  text-decoration:none;cursor:pointer;
+  box-shadow:0 6px 20px rgba(255,215,0,0.4);
+  transition:0.3s;margin-bottom:35px;
+}
+.cta-button:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(255,215,0,0.6);}
+.telegram-icon{width:26px;height:26px;}
+
+/* Stats Section - FIXED */
+.stats{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  margin-bottom:25px;
+  overflow-x:auto;
+  white-space:nowrap;
+  padding:10px;
+  scrollbar-width:none; /* hide scrollbar firefox */
+}
+.stats::-webkit-scrollbar{display:none;} /* hide scrollbar chrome */
+
+.stat-card{
+  display:inline-block;
+  background:linear-gradient(180deg,#2a0048 0%,#130024 100%);
+  color:#FFD700;
+  border-radius:12px;
+  padding:16px 30px;
+  min-width:110px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  flex-shrink:0;
+}
+.stat-number{font-size:1.6rem;font-weight:900;display:block;}
+.stat-label{color:#ccc;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px;}
+
+/* Trust Badges - single line */
+.trust-badges{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  white-space:nowrap;
+  scrollbar-width:none;
+}
+.trust-badges::-webkit-scrollbar{display:none;}
+
+.trust-item{
+  display:flex;align-items:center;gap:6px;
+  color:#22c55e;font-weight:600;font-size:0.95rem;
+}
+.check-icon{font-size:1rem;}
+
+/* Urgency Banner */
+.urgency-banner{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,rgba(255,0,80,0.15),rgba(255,0,80,0.08));
+  border:1.5px solid rgba(255,0,80,0.3);
+  color:#ff3355;font-weight:700;
+  padding:9px 20px;border-radius:50px;margin-top:22px;
+  animation:pulseGlow 2s ease-in-out infinite;
+}
+@keyframes pulseGlow{
+  0%,100%{box-shadow:0 0 10px rgba(255,0,80,0.2);}
+  50%{box-shadow:0 0 20px rgba(255,0,80,0.4);}
+}
+</style>
 </head>
+<body>
 
-<body class="bg-gray-900 font-sans antialiased">
-    
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P934PK4W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<div class="relative min-h-screen flex items-center justify-center">
-        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div class="relative text-center text-white max-w-2xl px-6 py-12">
-            <h1 class="mt-2 text-4xl font-extrabold sm:text-5xl gradient-text">Champion Chacha</h1>
+  <div class="profile-container">
+    <div class="profile-ring"></div>
+    <img src="https://i.ibb.co/Q745g9Nj/CHACHA-LOGO-UPSCALES.jpg" alt="Arjun Dubai" class="profile-image">
+    <div class="verified-badge"><span>✓</span></div>
+  </div>
 
-            <div class="grid place-items-center">
-                <p class="flex place-items-center gap-2 text-xl mt-4">
-                    <strong class="text-white hurry" style="text-shadow: 1px 0px rgb(10, 122, 83);">Hurry Up</strong>
-                    <strong id="countdown" class="text-3xl text-yellow-400"></strong>
-                    <strong class="text-white" style="text-shadow: 1px 0px rgb(10, 122, 83);">Seconds Left</strong>
-                </p>
+  <div class="premium-badge"><span>👑</span><span>PREMIUM EXPERT</span></div>
+  <h1 class="channel-name">Champion Chacha</h1>
+  <div class="location">👥 25699 SUBSCRIBERS</div>
 
-                <div class="my-6 flex justify-center space-x-4 sm:space-x-8 text-sm text-gray-200">
-                    <div class="text-center">
-                        <p class="text-3xl">🏏</p>
-                        <p class="font-semibold">Match Winner</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-3xl">🎯</p>
-                        <p class="font-semibold">Session Tips</p>
-                    </div>
-                    <div class="text-center">
-                        <p class="text-3xl">👑</p>
-                        <p class="font-semibold">Toss King</p>
-                    </div>
-                </div>
+  <p class="tagline">
+    Get <span class="highlight">VIP Cricket Predictions</span> from Dubai's #1 Expert.
+    <span class="highlight">95% Accuracy</span> Guaranteed!
+  </p>
 
-                <div class="mt-2 space-y-2">
-                    <a href="https://t.me/+sSgbSp2bBAVlOGI5" aria-label="Open Champion Chacha Telegram">
-                        <img src="https://i.ibb.co/Q745g9Nj/CHACHA-LOGO-UPSCALES.jpg" alt="Profile Image"
-                            class="mx-auto w-24 h-24 rounded-full mt-3 border-4 border-blue-800 shadow-lg">
-                    </a>
-                </div>
+  <a href="https://t.me/+aLkNaxsThZozMTcx" class="cta-button">
+    <svg class="telegram-icon" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"></path>
+    </svg>
+    JOIN VIP CHANNEL NOW
+  </a>
 
-                <div>
-                    <p class="text-sm font-semibold mt-4">Join Champion Chacha telegram click button 👇</p>
-                </div>
-
-                <div class="my-8 w-full grid place-items-center">
-                    <a href="https://t.me/+sSgbSp2bBAVlOGI5">
-                        <button class="tetegrambtn px-6 py-4 rounded-lg text-lg flex gap-2 place-items-center font-bold text-white shadow-lg hover:scale-110 border-b-8 border-red-500 my-4"
-                            style="background-color: rgb(2, 212, 216);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" class="bi bi-telegram" viewBox="0 0 16 16" aria-hidden="true">
-                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
-                            </svg>
-                            <strong class="uppercase text-black" style="text-shadow: 1px 1px white;">Champion Chacha Telegram</strong>
-                        </button>
-                    </a>
-                </div>
-
-            </div>
-        </div>
+  <!-- Stats Section -->
+  <div class="stats">
+    <div class="stat-card">
+      <span class="stat-number">50K+</span>
+      <span class="stat-label">Members</span>
     </div>
+    <div class="stat-card">
+      <span class="stat-number">95%</span>
+      <span class="stat-label">Win Rate</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">Daily</span>
+      <span class="stat-label">Updates</span>
+    </div>
+  </div>
 
-    <script>
-        const tgUrl = 'https://t.me/+sSgbSp2bBAVlOGI5';
+  <!-- Trust Badges -->
+  <div class="trust-badges">
+    <div class="trust-item"><span class="check-icon">✓</span><span>100% Free</span></div>
+    <div class="trust-item"><span class="check-icon">✓</span><span>Instant Access</span></div>
+    <div class="trust-item"><span class="check-icon">✓</span><span>No Card Needed</span></div>
+  </div>
 
-        // Logic to handle tracking and redirection
-        function trackAndRedirect(eventName, params = {}, url = tgUrl) {
-            let redirected = false;
-            const go = () => {
-                if (redirected) return;
-                redirected = true;
-                window.location.href = url;
-            };
-            try {
-                // Tracking the pixel event here
-                fbq('track', eventName, params);
-                setTimeout(go, 500); // Slight delay to ensure pixel fires
-            } catch (e) {
-                go();
-            }
-        }
+  <div class="urgency-banner">
+    <span>🔥</span><span>Limited Spots - Join Now!</span>
+  </div>
 
-        // Event listener for click
-        document.body.addEventListener('click', function (e) {
-            e.preventDefault();
-            // MODIFIED: Now tracks 'Subscribe' with specific value and predicted_ltv
-            trackAndRedirect('Subscribe', { 
-                value: '0.00', 
-                currency: 'USD', 
-                predicted_ltv: '0.00' 
-            });
-        });
 
-        let timeLeft = 60;
-        const countdownElement = document.getElementById('countdown');
-        function tick() {
-            if (countdownElement) {
-                countdownElement.textContent = timeLeft;
-            }
-            if (timeLeft <= 0) {
-                timeLeft = 60;
-            } else {
-                timeLeft--;
-            }
-            setTimeout(tick, 1000);
-        }
-        tick();
-    </script>
-</body>
 
-</html>
+</body></html>
