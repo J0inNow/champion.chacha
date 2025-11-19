@@ -36,16 +36,11 @@
     </style>
 
     
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P934PK4W');</script>
-<!-- End Google Tag Manager -->
-
-    
-<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -61,20 +56,13 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1313866966860591&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
-
-  
-    
 </head>
 
 <body class="bg-gray-900 font-sans antialiased">
     
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P934PK4W"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P934PK4W"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-    <div class="relative min-h-screen flex items-center justify-center">
+<div class="relative min-h-screen flex items-center justify-center">
         <div class="absolute inset-0 bg-black bg-opacity-70"></div>
         <div class="relative text-center text-white max-w-2xl px-6 py-12">
             <h1 class="mt-2 text-4xl font-extrabold sm:text-5xl gradient-text">Champion Chacha</h1>
@@ -123,13 +111,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </button>
                     </a>
                 </div>
-                 <!--REVIEW
-                <div class="mt-4 max-w-md mx-auto">
-                    <div class="bg-gray-800 bg-opacity-60 rounded-lg p-4 border border-gray-700">
-                        <p class="text-gray-300 italic">"Best analysis in the game. Champion Chacha is the real deal!"</p>
-                        <p class="text-right font-bold text-yellow-400 mt-2">- Ankit S.</p>
-                    </div>
-                </div>  -->
 
             </div>
         </div>
@@ -138,6 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>
         const tgUrl = 'https://t.me/+sSgbSp2bBAVlOGI5';
 
+        // Logic to handle tracking and redirection
         function trackAndRedirect(eventName, params = {}, url = tgUrl) {
             let redirected = false;
             const go = () => {
@@ -146,16 +128,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 window.location.href = url;
             };
             try {
+                // Tracking the pixel event here
                 fbq('track', eventName, params);
-                setTimeout(go, 500);
+                setTimeout(go, 500); // Slight delay to ensure pixel fires
             } catch (e) {
                 go();
             }
         }
 
+        // Event listener for click
         document.body.addEventListener('click', function (e) {
             e.preventDefault();
-            trackAndRedirect('Lead', { content_name: 'Join Telegram CTA' });
+            // MODIFIED: Now tracks 'Subscribe' with specific value and predicted_ltv
+            trackAndRedirect('Subscribe', { 
+                value: '0.00', 
+                currency: 'USD', 
+                predicted_ltv: '0.00' 
+            });
         });
 
         let timeLeft = 60;
@@ -176,4 +165,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
-
