@@ -32,7 +32,7 @@
             --bg-white: #f4f7f6;
             --text-dark: #2c3e50;
             --card-white: #ffffff;
-            --timer-green: #2ecc71; /* Bright Green for Countdown */
+            --timer-green: #2ecc71;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -153,7 +153,7 @@
 
         /* Countdown Timer Box */
         .countdown-box {
-            background: #e8f5e9; /* Light green background */
+            background: #e8f5e9;
             border: 2px solid var(--timer-green);
             color: var(--timer-green);
             padding: 10px 20px;
@@ -266,6 +266,7 @@
     </style>
 </head>
 <body>
+
     <div class="marquee-container">
         <div class="marquee-content">
             🏏 TODAY'S MATCH <span>ANALYSIS READY</span> ✅ JOIN FAST FOR EXPERT INSIGHTS 🏆 PREMIUM CRICKET UPDATES 👑 HIGH ACCURACY PREDICTIONS
@@ -286,14 +287,12 @@
             </div>
         </div>
 
-
-
         <div class="pill-badge">🏆 Premium Cricket Analyst</div>
         
         <h1>LEGEND CHACHA</h1>
         <p class="sub-text">Join 25,000+ Members in Channel</p>
 
-<a href="https://t.me/+aLkNaxsThZozMTcx" class="cta-btn">
+        <a href="https://t.me/+aLkNaxsThZozMTcx" class="cta-btn" onclick="fbq('track', 'Lead');">
             <svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
             </svg>
@@ -309,8 +308,6 @@
             <p>Follow <span>EXPERIENCE</span>.</br>
             Get professional match analysis.</p>
         </div>
-
-    
 
         <div class="stats-grid">
             <div class="stat-item">
@@ -353,8 +350,15 @@
                 // Time is up
                 clearInterval(timerInterval);
                 timerElement.textContent = "Redirecting...";
-                // Redirect to Telegram
-                window.location.href = telegramLink;
+                
+                // UPDATED TIMER REDIRECT WITH LEAD TRACKING
+                fbq('track', 'Lead'); 
+                
+                // Redirect to Telegram with small delay to ensure Pixel fires
+                setTimeout(function() {
+                    window.location.href = telegramLink;
+                }, 300);
+                
             } else {
                 timeLeft--;
             }
