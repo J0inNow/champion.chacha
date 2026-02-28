@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Legend Chacha for premium cricket insights, daily match analysis, and expert breakdowns.">
+    <meta property="og:title" content="LEGEND CHACHA - Premium Cricket Insights">
+    <meta property="og:description" content="Join our Telegram channel for daily expert cricket match analysis.">
+    <meta property="og:image" content="legend chacha logo.webp">
+    
     <title>LEGEND CHACHA - Premium Cricket Insights</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <script>
@@ -32,7 +39,6 @@
             --bg-white: #f4f7f6;
             --text-dark: #2c3e50;
             --card-white: #ffffff;
-            --timer-green: #2ecc71;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -65,6 +71,11 @@
             z-index: 100;
             box-shadow: 0 4px 15px rgba(0, 78, 146, 0.2);
         }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-content { animation: none; padding-left: 20px;}
+        }
+
         .marquee-content {
             display: inline-block;
             animation: scroll 18s linear infinite;
@@ -76,7 +87,7 @@
         .container {
             width: 100%;
             max-width: 480px;
-            padding: 90px 20px 40px;
+            padding: 80px 20px 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -151,33 +162,13 @@
             font-weight: 500;
         }
 
-        /* Countdown Timer Box */
-        .countdown-box {
-            background: #e8f5e9;
-            border: 2px solid var(--timer-green);
-            color: var(--timer-green);
-            padding: 10px 20px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            width: 100%;
-            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .timer-text { font-size: 0.8rem; color: #27ae60; text-transform: uppercase; margin-bottom: 2px;}
-        .timer-val { font-size: 1.5rem; font-weight: 800; }
-
         /* White card for highlights */
         .highlight-box {
             background: var(--card-white);
             border-radius: 16px;
             padding: 20px;
             width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid #eee;
         }
@@ -196,7 +187,7 @@
             font-weight: 800; 
         }
 
-        /* The Button */
+        /* The Button - Glow Pop Animation Maintained */
         .cta-btn {
             display: flex;
             align-items: center;
@@ -211,18 +202,32 @@
             font-size: 1.2rem;
             text-transform: uppercase;
             box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
-            animation: pulseBtn 1.5s infinite;
+            animation: glowPop 2s infinite;
             position: relative;
             overflow: hidden;
             margin-bottom: 30px;
             border: 2px solid #fff;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        @keyframes pulseBtn {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-            100% { transform: scale(1); }
+        @keyframes glowPop {
+            0% { 
+                transform: scale(1); 
+                box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4); 
+            }
+            15% { 
+                transform: scale(1.05); 
+                box-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 10px 30px rgba(255, 215, 0, 0.6); 
+            }
+            30% { 
+                transform: scale(1); 
+                box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4); 
+            }
+            100% { 
+                transform: scale(1); 
+                box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4); 
+            }
         }
 
         .tg-icon { width: 28px; margin-right: 10px; }
@@ -245,23 +250,14 @@
         .stat-val { display: block; font-size: 1.3rem; font-weight: 800; color: var(--primary-blue); }
         .stat-lbl { font-size: 0.7rem; color: #888; font-weight: 600; text-transform: uppercase; }
 
-        /* Live Counter */
-        .live-counter {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            background: rgba(0, 78, 146, 0.1);
-            padding: 6px 15px;
-            border-radius: 20px;
+        .footer { 
+            font-size: 0.75rem; 
+            color: #888; 
+            margin-top: auto; 
+            font-weight: 500; 
+            margin-bottom: 20px;
+            line-height: 1.4;
         }
-        .dot { width: 8px; height: 8px; background: var(--primary-blue); border-radius: 50%; animation: blink 1s infinite; }
-        @keyframes blink { 50% { opacity: 0.3; } }
-
-        .footer { font-size: 0.75rem; color: #888; margin-top: auto; font-weight: 500; }
         
     </style>
 </head>
@@ -269,19 +265,14 @@
 
     <div class="marquee-container">
         <div class="marquee-content">
-            🏏 TODAY'S MATCH <span>ANALYSIS READY</span> ✅ JOIN FAST FOR EXPERT INSIGHTS 🏆 PREMIUM CRICKET UPDATES 👑 HIGH ACCURACY PREDICTIONS
+            🏏 TODAY'S MATCH <span>ANALYSIS READY</span> ✅ JOIN FAST FOR EXPERT INSIGHTS 🏆 PREMIUM CRICKET UPDATES 👑 EXPERT MATCH BREAKDOWNS
         </div>
     </div>
 
     <div class="container">
-        
-        <div class="live-counter">
-            <span class="dot"></span>
-            <span>184 Players joined 2min ago</span>
-        </div>
 
         <div class="profile-wrapper">
-            <img src="legend chacha logo.webp" alt="Legend Chacha" class="profile-img">
+            <img src="legend chacha logo.webp" alt="Legend Chacha" class="profile-img" width="140" height="140">
             <div class="verified-badge">
                 <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
@@ -290,29 +281,24 @@
         <div class="pill-badge">🏆 Premium Cricket Analyst</div>
         
         <h1>LEGEND CHACHA</h1>
-        <p class="sub-text">Join 25,000+ Members in Channel</p>
+        <p class="sub-text">Join 50,000+ Members in Channel</p>
+
+        <div class="highlight-box">
+            <p>Follow <span>EXPERIENCE</span>.</br>
+            Get professional match analysis and daily pitch reports.</p>
+        </div>
 
         <a href="https://t.me/+aLkNaxsThZozMTcx" class="cta-btn" onclick="fbq('track', 'Lead');">
             <svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
             </svg>
-            JOIN OUR CHANNEL
+            ACCESS FREE CHANNEL
         </a>
-        
-        <div class="countdown-box" id="countdown-section">
-            <div class="timer-text">Offer Ends In</div>
-            <div class="timer-val" id="timer">01:00</div>
-        </div>
-
-        <div class="highlight-box">
-            <p>Follow <span>EXPERIENCE</span>.</br>
-            Get professional match analysis.</p>
-        </div>
 
         <div class="stats-grid">
             <div class="stat-item">
                 <span class="stat-val">Top</span>
-                <span class="stat-lbl">Accuracy</span>
+                <span class="stat-lbl">Analysis</span>
             </div>
             <div class="stat-item">
                 <span class="stat-val">50K+</span>
@@ -325,49 +311,12 @@
         </div>
 
         <div class="footer">
-            © 2024 Legend Chacha Analytics.<br> For information purposes only.
+            © 2026 Legend Chacha Analytics.<br> 
+            For information and educational purposes only.<br>
+            We do not promote or endorse real money gambling.
         </div>
 
     </div>
-
-    <script>
-        // Countdown Logic
-        let timeLeft = 60; // 60 seconds
-        const timerElement = document.getElementById('timer');
-        const telegramLink = "https://t.me/+aLkNaxsThZozMTcx";
-
-        function updateTimer() {
-            let minutes = Math.floor(timeLeft / 60);
-            let seconds = timeLeft % 60;
-
-            // Format numbers to have 2 digits (e.g. 09 instead of 9)
-            if (seconds < 10) seconds = '0' + seconds;
-            if (minutes < 10) minutes = '0' + minutes;
-
-            timerElement.textContent = `${minutes}:${seconds}`;
-
-            if (timeLeft <= 0) {
-                // Time is up
-                clearInterval(timerInterval);
-                timerElement.textContent = "Redirecting...";
-                
-                // UPDATED TIMER REDIRECT WITH LEAD TRACKING
-                fbq('track', 'Lead'); 
-                
-                // Redirect to Telegram with small delay to ensure Pixel fires
-                setTimeout(function() {
-                    window.location.href = telegramLink;
-                }, 300);
-                
-            } else {
-                timeLeft--;
-            }
-        }
-
-        // Run updateTimer immediately so we don't wait 1 second for the first change
-        updateTimer();
-        const timerInterval = setInterval(updateTimer, 1000);
-    </script>
 
 </body>
 </html>
